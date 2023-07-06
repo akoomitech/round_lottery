@@ -87,7 +87,7 @@ module.exports = (_, options) => {
         filename: `round_lottery.${options.mode}.css`
       }),
       new DefinePlugin({
-        'process.env.NODE_ENV': '"production"'
+        WEBPACK_CONFIG_MODE: '"build"'
       })
     ],
   

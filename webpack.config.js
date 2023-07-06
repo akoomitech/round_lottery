@@ -84,7 +84,7 @@ module.exports = {
       template: path.join(__dirname, './index.html'), 
     }),
     new DefinePlugin({
-      'process.env.NODE_ENV': '"development"'
+      WEBPACK_CONFIG_MODE: '"develop"'
     })
   ],
 

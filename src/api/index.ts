@@ -2,12 +2,12 @@ import { create } from '../util/request';
 import qs from 'qs';
 
 const basePath = '/api/v1';
-const baseURL = process.env.NODE_ENV === 'development' ? basePath : `http://localhost:3001${basePath}`;
-const end = process.env.NODE_ENV === 'development' ? '.json' : '';
+const baseURL = WEBPACK_CONFIG_MODE === 'develop' ? basePath : `http://localhost:3001${basePath}`;
+const end = WEBPACK_CONFIG_MODE === 'develop' ? '.json' : '';
 
 const request = create({ baseURL });
 
-console.log(process.env.NODE_ENV, '.....NODE_ENV')
+console.log(WEBPACK_CONFIG_MODE, '.....NODE_ENV')
 
 export default {
   async getProducts(cond = {}) {
