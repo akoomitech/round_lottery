@@ -21,7 +21,7 @@ yarn global add @imoka/imoka-cli
 * 执行操作
 
 ```
-git clone git@github.com:funsonli/spring-boot-demo.git
+git clone git@github.com:akoomitech/round_lottery.git
 
 cd round_lottery
 
