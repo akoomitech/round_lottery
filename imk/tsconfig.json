@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+      "outDir": "./__dist",
+      "sourceMap": true,
+      "module": "commonjs",
+      "allowJs": true,
+      "checkJs": true,
+      "baseUrl": ".",
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "strict": false,
+      "lib": [
+        "es5",
+        "es6",
+        "dom",
+        "ES2021.String"
+      ]
+  },
+  "include": [
+      "./**/*"
+  ]
+}

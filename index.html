@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <!-- <__html_keywords> -->
+  <!-- <__html_description> -->
+  <!-- <__share_meta_data> -->
+  <title>
+    <!-- <__html_title> -->
+  </title>
+  <!-- <__model_data> -->
+  <script type="text/javascript">
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+          recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              if (!clientWidth) return;
+              if (clientWidth >= 375) {
+                  docEl.style.fontSize = '100px';
+              } else {
+                  docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+              }
+              var html = document.getElementsByTagName('html')[0]
+              var settingFs = parseInt(100 * (clientWidth / 375))
+              var settedFs = settingFs
+              var whileCount = 0
+              while (true) {
+                var realFs = parseInt(window.getComputedStyle(html).fontSize)
+                var delta = realFs - settedFs
+                // 不相等
+                if (Math.abs(delta) >= 1) {
+                  if (delta > 0) {
+                    settingFs--
+                  } else {
+                    settingFs++
+                  }
+                  html.setAttribute('style', 'font-size:' + settingFs + 'px!important')
+                } else {
+                  break
+                }
+                if (whileCount++ > 100) {
+                  break
+                }
+              }
+          };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
+  </script>
+</head>
+<!-- <__corelib_styles> -->
+<!-- <__template_dist_styles> -->
+
+<body>
+  <div id="app"></div>
+  <!-- <__corelib_scripts> -->
+  <!-- <__template_dist_scripts> -->
+</body>
+</html>

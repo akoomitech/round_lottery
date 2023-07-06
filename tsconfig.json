@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "module": "commonjs",
+      "target": "es5",
+      "allowJs": true,
+      "checkJs": true,
+      "jsx": "react",
+      "declaration": true,
+      "declarationDir": "dist",
+      "baseUrl": ".",
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "strict": false,
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "lib": [
+        "es5",
+        "es6",
+        "dom",
+        "ES2021.String"
+      ]
+  },
+  "include": [
+      "./src/**/*"
+  ]
+}
